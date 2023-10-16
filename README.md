@@ -1,6 +1,6 @@
 # AI Art Generator App
 
-![Sample Art]([sample_art.png](https://cdn.stablediffusionapi.com/generations/c9fc3626-12b8-4761-a271-1954d444c849-0.png))
+![Sample Art]([https://cdn.stablediffusionapi.com/generations/c9fc3626-12b8-4761-a271-1954d444c849-0.png])
 
 ## Table of Contents
 
@@ -18,10 +18,6 @@
 
 The AI Art Generator App is an Android application that leverages the Stable Diffusion API to create unique artworks based on user-provided prompts. It follows the MVVM architecture pattern and uses Retrofit for API communication and Glide for efficient image loading.
 
-## Demo
-
-[Link to Demo Video](https://your-demo-video-link.com)
-
 ## Getting Started
 
 ### Prerequisites
@@ -35,5 +31,5 @@ The AI Art Generator App is an Android application that leverages the Stable Dif
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/ai-art-generator.git
-   cd ai-art-generator
+   git clone https://github.com/UmairOye/AI-Art-Generator.git
+   cd AI-Art-Generator
