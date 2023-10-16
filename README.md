@@ -1,6 +1,6 @@
 # AI Art Generator App
 
-<img width="200" height="350" src="https://cdn.stablediffusionapi.com/generations/c9fc3626-12b8-4761-a271-1954d444c849-0.png" alt="Image" >
+<img width="100" height="100" src="https://cdn.stablediffusionapi.com/generations/c9fc3626-12b8-4761-a271-1954d444c849-0.png" alt="Image" >
 ## Table of Contents
 
 - [About the Project](#about-the-project)
