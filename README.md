@@ -1,27 +1,39 @@
-# AI-Art-Generator
+# AI Art Generator App
 
-# Table of Contents
-- About the Project
-- Getting Started
-- Prerequisites
-- Installation
-- Usage
-- Modes
-- Screenshots
-- Contributing
+![Sample Art]([sample_art.png](https://cdn.stablediffusionapi.com/generations/c9fc3626-12b8-4761-a271-1954d444c849-0.png))
 
+## Table of Contents
 
-# About the Project
-The AI Art Generator is a web application that allows users to create unique artworks using AI-powered algorithms. It leverages the Stable Diffusion API to generate images based on user-provided prompts and settings.
+- [About the Project](#about-the-project)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+  - [Making API Requests](#making-api-requests)
+  - [Loading Images](#loading-images)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
 
-# Getting Started
-# Prerequisites
-Ensure you have Node.js and npm installed.
-Obtain an API key from Stable Diffusion API.
-# Installation
+## About the Project
 
-```bash
-git clone https://github.com/UmairOye/AI-Art-Generator.git
-cd AI-Art-Generator
-npm install
-npm start
+The AI Art Generator App is an Android application that leverages the Stable Diffusion API to create unique artworks based on user-provided prompts. It follows the MVVM architecture pattern and uses Retrofit for API communication and Glide for efficient image loading.
+
+## Demo
+
+[Link to Demo Video](https://your-demo-video-link.com)
+
+## Getting Started
+
+### Prerequisites
+
+- Android Studio with Kotlin support
+- Knowledge of MVVM architecture
+- Retrofit and Glide dependencies added to your project
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/ai-art-generator.git
+   cd ai-art-generator
