@@ -12,7 +12,6 @@
   - [Making API Requests](#making-api-requests)
   - [Loading Images](#loading-images)
 - [Screenshots](#screenshots)
-- [Contributing](#contributing)
 
 ## About the Project
 
