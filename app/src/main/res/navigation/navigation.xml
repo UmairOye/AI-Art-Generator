@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.imageartgenerator.ui.fragments.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_downloader"
+            app:destination="@id/downloader" />
+    </fragment>
+    <fragment
+        android:id="@+id/downloader"
+        android:name="com.example.imageartgenerator.ui.fragments.Downloader"
+        android:label="fragment_downloader"
+        tools:layout="@layout/fragment_downloader" />
+</navigation>

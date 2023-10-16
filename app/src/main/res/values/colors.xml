@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="night">#333333</color>
+    <color name="status_bar_color">#009688</color>
+    <color name="list_item_color">#fff</color>
+
+</resources>

@@ -1,0 +1,30 @@
+package com.example.imageartgenerator.models
+
+data class DreamBoothRequest(
+    val key: String?,
+    val model_id: String,
+    val prompt: String,
+    val negative_prompt: String?,
+    val width: String,
+    val height: String,
+    val samples: String,
+    val num_inference_steps: String,
+    val safety_checker: String,
+    val enhance_prompt: String,
+    val seed: Int?,
+    val guidance_scale: Double,
+    val multi_lingual: String,
+    val panorama: String,
+    val self_attention: String,
+    val upscale: String,
+    val embeddings_model: String?,
+    val lora_model: String?,
+    val tomesd: String,
+    val clip_skip: String,
+    val use_karras_sigmas: String,
+    val vae: String?,
+    val lora_strength: String?,
+    val scheduler: String,
+    val webhook: String?,
+    val track_id: String?
+)

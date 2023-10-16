@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Image Art Generator</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="prompt">ultra realistic close up portrait ((beautiful pale cyberpunk female with heavy black eyeliner</string>
+    <string name="output">output</string>
+    <string name="send_request">Send Request</string>
+    <string name="prompt_textview">Prompt</string>
+    <string name="your_query_here">your query here...</string>
+    <string name="clear">Clear</string>
+    <string name="submit">Submit</string>
+    <string name="result">Result</string>
+    <string name="prompt_">Prompt:</string>
+    <string name="describe_what_you_want_the_image_be_like">Describe what you want the image be like?</string>
+    <string name="negative_prompt">Negative Prompt:</string>
+    <string name="describe_what_you_don_t_want_the_image_be_like">Describe what you don\'t want the image be like?</string>
+    <string name="output_image_size">Output image size:</string>
+    <string name="_256_x_256">256 x 256</string>
+    <string name="_512_x_512">512 x 512</string>
+    <string name="_1024_x_1024">1024 x 1024</string>
+    <string name="select_model">Select Model:</string>
+    <string name="models">models</string>
+    <string name="generate">Generate</string>
+    <string name="midjourney_v4">MidJourney V4</string>
+    <string name="anything_v3">Anything V3</string>
+    <string name="inkmix">InkMix</string>
+    <string name="meinamix">MeinaMix</string>
+    <string name="f222">F222</string>
+    <string name="realistic_vision">Realistic Vision</string>
+    <string name="dream_shaper">Dream Shaper</string>
+    <string name="anything_v4">Anything V4</string>
+    <string name="vintedois">Vintedois</string>
+    <string name="redream">Redream</string>
+    <string name="download">Download</string>
+</resources>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.Home">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/prompt_"
+                android:textColor="@color/black"
+                android:includeFontPadding="false"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:background="@drawable/prompt_bg"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:padding="@dimen/_5sdp"
+                android:inputType="textMultiLine|text"
+                android:hint="@string/describe_what_you_want_the_image_be_like"
+                android:textSize="@dimen/_10ssp"
+                android:gravity="top"
+                android:id="@+id/edPrompt"
+                android:textColorHint="@color/night"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/negative_prompt"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_8sdp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:id="@+id/edNegativePrompt"
+                android:hint="@string/describe_what_you_don_t_want_the_image_be_like"
+                android:textSize="@dimen/_10ssp"
+                android:background="@drawable/prompt_bg"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:inputType="textMultiLine|text"
+                android:gravity="top"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/output_image_size"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_8sdp"
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup"
+                android:layout_marginTop="@dimen/_8sdp"
+                >
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_256_x_256"
+                    android:id="@+id/radio256"
+                    android:textSize="@dimen/_9ssp"
+                    />
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:checked="true"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_512_x_512"
+                    android:id="@+id/radio512"
+                    android:textSize="@dimen/_9ssp"
+                    />
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_1024_x_1024"
+                    android:id="@+id/radio1024"
+                    android:textSize="@dimen/_9ssp"
+                    />
+
+
+            </RadioGroup>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_model"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_8sdp"
+                />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recyclerView"
+                android:layout_marginTop="@dimen/_8sdp"
+                tools:listitem="@layout/list_item_models"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:id="@+id/btnGenerate"
+                android:text="@string/generate"
+                android:layout_marginBottom="@dimen/_10sdp"
+                />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
