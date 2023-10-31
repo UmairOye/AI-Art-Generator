@@ -83,3 +83,8 @@ Glide.with(this)
 <img width="150" height="300" src="https://github.com/UmairOye/AI-Art-Generator/blob/main/screenshots/Screenshot_20231016-161700.png" alt="Image" >   <img width="150" height="300" src="https://github.com/UmairOye/AI-Art-Generator/blob/main/screenshots/Screenshot_20231016-161715.png" alt="Image" >   <img width="150" height="300" src="https://github.com/UmairOye/AI-Art-Generator/blob/main/screenshots/Screenshot_20231016-161346.png" alt="Image" >
 
 
+## Don't Forget to Star ⭐
+
+If you found this project useful or had fun exploring it, please consider giving it a star. It's a great way to show your appreciation and it puts a smile on my face! 😊🌟
+
+
