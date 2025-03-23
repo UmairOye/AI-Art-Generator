@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.Downloader">
+    tools:context=".presentation.adapters.ui.fragments.Downloader">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/CardImage"
@@ -45,16 +45,5 @@
         app:layout_constraintEnd_toEndOf="@+id/CardImage"
         app:layout_constraintStart_toStartOf="@+id/CardImage"
         app:layout_constraintTop_toBottomOf="@+id/CardImage" />
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/download" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

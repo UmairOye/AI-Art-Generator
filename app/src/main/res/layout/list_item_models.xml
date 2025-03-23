@@ -32,6 +32,7 @@
             android:layout_width="@dimen/_25sdp"
             android:layout_height="@dimen/_25sdp"
             android:layout_marginTop="4dp"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:button="@drawable/custom_checkbox"
             android:layout_marginEnd="4dp"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.Home">
+    tools:context=".presentation.adapters.ui.fragments.Home">
 
 
     <ScrollView
@@ -37,12 +37,13 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_100sdp"
+                android:autofillHints="username"
                 android:background="@drawable/prompt_bg"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:padding="@dimen/_5sdp"
                 android:inputType="textMultiLine|text"
                 android:hint="@string/describe_what_you_want_the_image_be_like"
-                android:textSize="@dimen/_10ssp"
+                android:textSize="@dimen/_13ssp"
                 android:gravity="top"
                 android:id="@+id/edPrompt"
                 android:textColorHint="@color/night"
@@ -61,7 +62,7 @@
                 android:layout_height="@dimen/_100sdp"
                 android:id="@+id/edNegativePrompt"
                 android:hint="@string/describe_what_you_don_t_want_the_image_be_like"
-                android:textSize="@dimen/_10ssp"
+                android:textSize="@dimen/_13ssp"
                 android:background="@drawable/prompt_bg"
                 android:padding="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_8sdp"

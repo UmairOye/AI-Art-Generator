@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/home2"
-        android:name="com.example.imageartgenerator.ui.fragments.Home"
+        android:name="com.example.imageartgenerator.presentation.adapters.ui.fragments.Home"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/downloader"
-        android:name="com.example.imageartgenerator.ui.fragments.Downloader"
+        android:name="com.example.imageartgenerator.presentation.adapters.ui.fragments.Downloader"
         android:label="fragment_downloader"
         tools:layout="@layout/fragment_downloader" />
 </navigation>

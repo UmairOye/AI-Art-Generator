@@ -32,4 +32,5 @@
     <string name="vintedois">Vintedois</string>
     <string name="redream">Redream</string>
     <string name="download">Download</string>
+    <string name="something_went_wrong_try_again">something went wrong! Try again</string>
 </resources>

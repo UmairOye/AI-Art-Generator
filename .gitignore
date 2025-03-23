@@ -1,15 +1,20 @@
+# Ignore Android Studio/IntelliJ IDE files
+.idea/
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+
+# Ignore Gradle files
+.gradle/
 local.properties
+apikeys.properties
+
+# Ignore build output
+/build/
+*/build/
+
+# Ignore log and cache files
+*.log
+captures/
+
+# Ignore generated assets
+app/release/
+app/debug/
