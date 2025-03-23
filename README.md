@@ -1,6 +1,6 @@
 # AI Art Generator App
 
-<img width="100" height="100" src="https://github.com/UmairOye/AI-Art-Generator/blob/main/screenshots/the-best-stable-diffusion-prompts.webp" alt="Image" >
+<img width="600" height="300" src="https://github.com/UmairOye/AI-Art-Generator/blob/main/screenshots/the-best-stable-diffusion-prompts.webp" alt="Image" >
 
 ## Table of Contents
 
