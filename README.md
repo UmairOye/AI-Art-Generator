@@ -37,6 +37,7 @@ The AI Art Generator App is an Android application that leverages the Stable Dif
 
 ## Usage
 ### Making API Requests
+## Retrofit Client
 
 ```bash
     @Module
@@ -59,12 +60,21 @@ object RetrofitInjection {
     }
 }
   
+  
+```
+## API Service
+
+  ```bash
   interface ApiService {
     @POST(BuildConfig.END_POINT)
     fun makeApiRequest(@Body requestBody: DreamBoothRequest): Call<DreamBoothResponse>
 }
-  
-       override fun makeApiRequest(requestBody: DreamBoothRequest): Flow<RequestState<MetaData?>> =
+```
+
+## Make API Request
+
+```bash
+override fun makeApiRequest(requestBody: DreamBoothRequest): Flow<RequestState<MetaData?>> =
         flow {
             emit(RequestState.Loading)
 
@@ -99,8 +109,8 @@ object RetrofitInjection {
             }
         }.flowOn(Dispatchers.IO)
 
-
 ```
+
 ## Loading Images
 Glide is used for efficient image loading. Here's an example of how to load an image into an ImageView:
 ```bash
