@@ -15,7 +15,7 @@
 
 ## About the Project
 
-The AI Art Generator App is an Android application that leverages the Stable Diffusion API to create unique artworks based on user-provided prompts. It follows the MVVM architecture pattern and uses Retrofit for API communication and Glide for efficient image loading.
+The AI Art Generator App is an Android application that leverages the Stable Diffusion API to create unique artworks based on user-provided prompts. It follows the Clean Architectuer pattern and uses Retrofit for API communication, flows for API states and Glide for efficient image loading.
 
 ## Getting Started
 
@@ -39,37 +39,66 @@ The AI Art Generator App is an Android application that leverages the Stable Dif
 ### Making API Requests
 
 ```bash
-    val artApi: ArtApi by lazy {
-          Retrofit.Builder()
-              .baseUrl(BASE_URL)
-              .addConverterFactory(GsonConverterFactory.create())
-              .build()
-              .create(ArtApi::class.java)
-      }
+    @Module
+@InstallIn(SingletonComponent::class)
+object RetrofitInjection {
+
+    @Provides
+    @Singleton
+    fun provideRetrofitClient(): Retrofit {
+       return Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideApiService(retrofit: Retrofit): ApiService {
+        return retrofit.create(ApiService::class.java)
+    }
+}
   
-  interface ArtApi {
-      @POST("/api/v4/dreambooth")
-      fun makeApiRequest(@Body requestBody: DreamBoothRequest): Call<ApiResponse>
-  }
+  interface ApiService {
+    @POST(BuildConfig.END_POINT)
+    fun makeApiRequest(@Body requestBody: DreamBoothRequest): Call<DreamBoothResponse>
+}
   
-   fun makeApiRequest(requestBody: DreamBoothRequest, onResponse: (ApiResponse?) -> Unit) {
-          val call = artApi.makeApiRequest(requestBody)
-          call.enqueue(object : Callback<ApiResponse> {
-              override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
-                  if(response.isSuccessful)
-                  {
-                      Log.d(TAG, "onResponse: ${response.body()!!.status}")
-                      onResponse(response.body())
-                  }else{
-                      Log.d(TAG, "onResponse: not successful")
-                  }
-              }
-  
-              override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
-                  onResponse(ApiResponse(t.message.toString(), 0.0, 0, emptyList()))
-              }
-          })
-      }
+       override fun makeApiRequest(requestBody: DreamBoothRequest): Flow<RequestState<MetaData?>> =
+        flow {
+            emit(RequestState.Loading)
+
+            try {
+                val response = suspendCoroutine { continuation ->
+                    artApi.makeApiRequest(requestBody)
+                        .enqueue(object : Callback<DreamBoothResponse> {
+                            override fun onResponse(
+                                call: Call<DreamBoothResponse>,
+                                response: Response<DreamBoothResponse>
+                            ) {
+                                continuation.resume(response)
+                            }
+
+                            override fun onFailure(call: Call<DreamBoothResponse>, t: Throwable) {
+                                continuation.resumeWithException(t)
+                            }
+                        })
+                }
+
+                if (response.isSuccessful && response.body() != null) {
+                    emit(RequestState.Success(response.body()!!.meta))
+                    Log.d(TAG, "onResponse: ${response.body()?.meta}")
+                } else {
+                    emit(RequestState.Error(Exception("Response not successful")))
+                    Log.d(TAG, "onResponse: not successful")
+                }
+
+            } catch (e: Exception) {
+                emit(RequestState.Error(e))
+                Log.d(TAG, "onFailure: ${e.message}")
+            }
+        }.flowOn(Dispatchers.IO)
+
 
 ```
 ## Loading Images
