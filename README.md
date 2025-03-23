@@ -24,6 +24,8 @@ The AI Art Generator App is an Android application that leverages the Stable Dif
 - Android Studio with Kotlin support
 - Knowledge of MVVM architecture
 - Retrofit and Glide dependencies added to your project
+- Knowledge of Kotlin Flows
+- Knowledge of Dagger-Hilt
 
 ### Installation
 
