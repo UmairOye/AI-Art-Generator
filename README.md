@@ -123,6 +123,15 @@ Glide.with(this)
 ## Screenshots
 <img width="150" height="300" src="https://github.com/UmairOye/AI-Art-Generator/blob/main/screenshots/Screenshot_20231016-161700.png" alt="Image" >   <img width="150" height="300" src="https://github.com/UmairOye/AI-Art-Generator/blob/main/screenshots/Screenshot_20231016-161715.png" alt="Image" >   <img width="150" height="300" src="https://github.com/UmairOye/AI-Art-Generator/blob/main/screenshots/Screenshot_20231016-161346.png" alt="Image" >
 
+## 💼 Hire Me
+Need help with Android development?  
+I specialize in:
+- Custom UI components (e.g., animated bottom navigation)
+- API integration (AI tools, social media, ads)
+- Performance optimization and clean architecture
+
+👉 [Hire me on Fiverr](https://www.fiverr.com/s/pd2VmoR)
+
 
 ## Don't Forget to Star ⭐
 
