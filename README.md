@@ -130,7 +130,7 @@ I specialize in:
 - API integration (AI tools, social media, ads)
 - Performance optimization and clean architecture
 
-👉 [Hire me on Fiverr](https://www.fiverr.com/s/pd2VmoR)
+👉 [Hire me on Fiverr](https://www.fiverr.com/users/theandroiddev/)
 
 
 ## Don't Forget to Star ⭐
